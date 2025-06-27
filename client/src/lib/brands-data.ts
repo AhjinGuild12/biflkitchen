@@ -61,7 +61,8 @@ export const brands: Brand[] = [
     specialty: 'Matte black enamel Dutch ovens and cocottes with self-basting lids',
     country: 'french',
     links: [
-      { icon: '🏪', label: 'Shop Staub Collection', url: 'https://thehomestore.co.nz/collections/staub' }
+      { icon: '🏪', label: 'Shop Staub Collection', url: 'https://thehomestore.co.nz/collections/staub' },
+      { icon: '🛒', label: 'Cast Iron Collection', url: 'https://amzn.to/3I33PDp' }
     ]
   },
   {
