@@ -25,7 +25,8 @@ export const brands: Brand[] = [
     country: 'french',
     links: [
       { icon: '🏪', label: 'Official Le Creuset Store', url: 'https://www.lecreuset.com' },
-      { icon: '🛍️', label: 'Williams Sonoma Collection', url: 'https://www.williams-sonoma.com/shop/cookware/cookware-le-creuset/' }
+      { icon: '🛍️', label: 'Williams Sonoma Collection', url: 'https://www.williams-sonoma.com/shop/cookware/cookware-le-creuset/' },
+      { icon: '🛒', label: 'Amazon Collection', url: 'https://amzn.to/3GgJ06R' }
     ]
   },
   {
@@ -37,7 +38,8 @@ export const brands: Brand[] = [
     specialty: 'Professional-grade carbon steel and non-stick pans used by Michelin chefs',
     country: 'french',
     links: [
-      { icon: '🏪', label: 'Official De Buyer Store', url: 'https://www.debuyer-brandshop.com/en' }
+      { icon: '🏪', label: 'Official De Buyer Store', url: 'https://www.debuyer-brandshop.com/en' },
+      { icon: '🛒', label: 'Amazon Collection', url: 'https://amzn.to/444favr' }
     ]
   },
   {
@@ -49,7 +51,8 @@ export const brands: Brand[] = [
     specialty: 'Hand-hammered copper cookware for professional chefs and culinary enthusiasts',
     country: 'french',
     links: [
-      { icon: '🛍️', label: 'Williams Sonoma Collection', url: 'https://www.williams-sonoma.com/shop/cookware/cookware-mauviel/' }
+      { icon: '🛍️', label: 'Williams Sonoma Collection', url: 'https://www.williams-sonoma.com/shop/cookware/cookware-mauviel/' },
+      { icon: '🛒', label: 'Amazon Collection', url: 'https://amzn.to/3Te198b' }
     ]
   },
   {
@@ -74,7 +77,8 @@ export const brands: Brand[] = [
     specialty: 'Removable handle system and tri-ply construction for space-saving storage',
     country: 'french',
     links: [
-      { icon: '🇺🇸', label: 'Cristel USA Official', url: 'https://www.cristelusa.com' }
+      { icon: '🇺🇸', label: 'Cristel USA Official', url: 'https://www.cristelusa.com' },
+      { icon: '🛒', label: 'Amazon Collection', url: 'https://amzn.to/4khzG0y' }
     ]
   },
   
@@ -216,7 +220,8 @@ export const brands: Brand[] = [
     specialty: 'Affordable stainless steel and non-stick without compromising durability',
     country: 'global',
     links: [
-      { icon: '🛒', label: 'Walmart Collection', url: 'https://www.walmart.com/browse/home/tramontina/4044_623679_8140341_5999849' }
+      { icon: '🛒', label: 'Walmart Collection', url: 'https://www.walmart.com/browse/home/tramontina/4044_623679_8140341_5999849' },
+      { icon: '🛒', label: 'Amazon Collection', url: 'https://amzn.to/45KHwMC' }
     ]
   }
 ];
