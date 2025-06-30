@@ -92,7 +92,8 @@ export const brands: Brand[] = [
     specialty: 'World-renowned pressure cookers and premium stainless steel cookware',
     country: 'german',
     links: [
-      { icon: '🏪', label: 'Shop Fissler Collection', url: 'https://thelivingstyles.co.nz/brands/fissler/' }
+      { icon: '🏪', label: 'Shop Fissler Collection', url: 'https://thelivingstyles.co.nz/brands/fissler/' },
+      { icon: '🛒', label: 'Amazon Collection', url: 'https://amzn.to/3Tkdg3E' }
     ]
   },
   {
@@ -118,7 +119,8 @@ export const brands: Brand[] = [
     specialty: 'Multi-layer stainless steel with perfect heat distribution technology',
     country: 'belgian',
     links: [
-      { icon: '🏪', label: 'Shop Demeyere Online', url: 'https://www.kitchenknives.co.uk/by-brand/demeyere/' }
+      { icon: '🏪', label: 'Shop Demeyere Online', url: 'https://www.kitchenknives.co.uk/by-brand/demeyere/' },
+      { icon: '🛒', label: 'Amazon Collection', url: 'https://amzn.to/40vAQya' }
     ]
   },
   
@@ -132,7 +134,8 @@ export const brands: Brand[] = [
     specialty: 'Premium pressure cookers and pasta pots for authentic Italian cooking',
     country: 'italian',
     links: [
-      { icon: '🏪', label: 'Shop Lagostina', url: 'https://www.u-buy.co.nz/brand/lagostina' }
+      { icon: '🏪', label: 'Shop Lagostina', url: 'https://www.u-buy.co.nz/brand/lagostina' },
+      { icon: '🛒', label: 'Amazon Collection', url: 'https://amzn.to/44HmMUM' }
     ]
   },
   {
@@ -144,7 +147,8 @@ export const brands: Brand[] = [
     specialty: 'Iconic moka pots and aluminum cookware for authentic espresso',
     country: 'italian',
     links: [
-      { icon: '☕', label: 'Official Bialetti Store', url: 'https://www.bialetti.co.nz/collections' }
+      { icon: '☕', label: 'Official Bialetti Store', url: 'https://www.bialetti.co.nz/collections' },
+      { icon: '🛒', label: 'Amazon Collection', url: 'https://amzn.to/4lzOCbt' }
     ]
   },
   
@@ -182,7 +186,8 @@ export const brands: Brand[] = [
     specialty: 'PFOA-free ceramic titanium non-stick for healthier cooking',
     country: 'nordic',
     links: [
-      { icon: '🏪', label: 'Spotlight Stores', url: 'https://www.spotlightstores.com/nz/scanpan' }
+      { icon: '🏪', label: 'Spotlight Stores', url: 'https://www.spotlightstores.com/nz/scanpan' },
+      { icon: '🛒', label: 'Amazon Collection', url: 'https://amzn.to/4l9C36O' }
     ]
   },
   
