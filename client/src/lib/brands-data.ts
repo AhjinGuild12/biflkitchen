@@ -5,7 +5,8 @@ export interface Brand {
   category: 'budget' | 'mid' | 'premium' | 'luxury';
   heritage: string;
   specialty: string;
-  country: 'french' | 'german' | 'belgian' | 'italian' | 'nordic' | 'british' | 'australian' | 'canadian' | 'austrian' | 'thai' | 'dutch' | 'global';
+  country: 'french' | 'german' | 'belgian' | 'italian' | 'nordic' | 'british' | 'australian' | 'canadian' | 'austrian' | 'thai' | 'dutch' | 'swiss' | 'spanish' | 'japanese' | 'global';
+  type?: 'cookware' | 'knives';
   links: Array<{
     icon: string;
     label: string;
@@ -395,6 +396,199 @@ export const brands: Brand[] = [
       { icon: '🛒', label: 'Walmart Collection', url: 'https://www.walmart.com/browse/home/tramontina/4044_623679_8140341_5999849' },
       { icon: '🛒', label: 'Amazon Collection', url: 'https://amzn.to/45KHwMC' }
     ]
+  },
+
+  // KNIFE BRANDS
+  
+  // German Knife Masters
+  {
+    id: 'wusthof',
+    name: 'Wüsthof',
+    founded: 'Founded 1814',
+    category: 'premium',
+    heritage: 'German knife mastery from Solingen\'s "City of Blades" for over 200 years',
+    specialty: 'Forged chef\'s knives with the famous trident trademark - 7 generations of family craftsmanship',
+    country: 'german',
+    type: 'knives',
+    links: [
+      { icon: '🏪', label: 'Crate & Barrel US', url: 'https://www.crateandbarrel.com/shop-by-brand/wusthof/' },
+      { icon: '🇦🇺', label: 'Kitchenware Australia', url: 'https://www.kitchenware.com.au/wusthof.html' },
+      { icon: '🌍', label: 'Cutlery and More', url: 'https://cutleryandmore.com/pages/wusthof' }
+    ]
+  },
+  {
+    id: 'henckels',
+    name: 'Henckels (Zwilling)',
+    founded: 'Founded 1731',
+    category: 'premium',
+    heritage: 'One of the world\'s oldest companies with iconic twin logo from 1731',
+    specialty: 'German precision knives from the Cutlers\' Guild of Solingen with 300+ years of heritage',
+    country: 'german',
+    type: 'knives',
+    links: [
+      { icon: '🇺🇸', label: 'Zwilling Official US', url: 'https://www.zwilling.com/us/knives/' },
+      { icon: '🇦🇺', label: 'Victoria\'s Basement', url: 'https://www.victoriasbasement.com.au/brands/zwilling-j-a-henckels/' },
+      { icon: '🇩🇪', label: 'Zwilling Germany', url: 'https://www.zwilling.com/de/' }
+    ]
+  },
+  {
+    id: 'f-dick',
+    name: 'F. Dick',
+    founded: 'Founded 1778',
+    category: 'premium',
+    heritage: 'German precision sharpening and butcher tools since 1778',
+    specialty: 'Professional butcher\'s knives and sharpening steels with the arrow trademark',
+    country: 'german',
+    type: 'knives',
+    links: [
+      { icon: '🇺🇸', label: 'Knife Merchant US', url: 'https://knifemerchant.com/knives/brands/friedrich-dick-knives/' },
+      { icon: '🇦🇺', label: 'Chef\'s Essentials', url: 'https://www.chefsessentials.com.au/brands/fdick/' },
+      { icon: '🇩🇪', label: 'Official Dick Germany', url: 'https://www.dick.de/messer/en/cutting/series/activecut' }
+    ]
+  },
+  
+  // French Artisan Knives
+  {
+    id: 'sabatier',
+    name: 'Sabatier',
+    founded: 'Founded 1810',
+    category: 'premium',
+    heritage: 'French artisan knives from Thiers - synonymous with French cuisine for 200+ years',
+    specialty: 'Precise cutting tools with metallurgy expertise from K-Sabatier family heritage',
+    country: 'french',
+    type: 'knives',
+    links: [
+      { icon: '🏪', label: 'Official Sabatier Shop', url: 'https://www.sabatier-shop.com' },
+      { icon: '🇺🇸', label: 'Bernal Cutlery', url: 'https://bernalcutlery.com/en-au/collections/k-sabatier' },
+      { icon: '🇦🇺', label: 'Peter\'s of Kensington', url: 'https://www.petersofkensington.com.au/brands/sabatier/' }
+    ]
+  },
+  {
+    id: 'opinel',
+    name: 'Opinel',
+    founded: 'Founded 1890',
+    category: 'budget',
+    heritage: 'French working man\'s knife with iconic wooden handle and Virobloc safety lock',
+    specialty: 'Pocket knives with "crowned hand" trademark - 15 million sold annually worldwide',
+    country: 'french',
+    type: 'knives',
+    links: [
+      { icon: '🇺🇸', label: 'Opinel USA', url: 'https://www.opinel-usa.com' },
+      { icon: '🇫🇷', label: 'Opinel France', url: 'https://www.opinel.com/en' },
+      { icon: '🇦🇺', label: 'Opinel Australia', url: 'https://opinel.com.au' }
+    ]
+  },
+  {
+    id: 'laguiole',
+    name: 'Laguiole',
+    founded: 'Founded 1829',
+    category: 'premium',
+    heritage: 'French shepherd knives from Aveyron with distinctive bee decoration',
+    specialty: 'Traditional French folding knives inspired by Spanish navaja with café culture heritage',
+    country: 'french',
+    type: 'knives',
+    links: [
+      { icon: '🌍', label: 'Laguiole Imports', url: 'https://www.laguiole-imports.com/en-au/collections/laguiole-knives' },
+      { icon: '🇪🇺', label: 'Laguiole French Knives', url: 'https://www.laguiole-french-knives.com/en/' }
+    ]
+  },
+  
+  // Scandinavian Craftsmanship
+  {
+    id: 'helle',
+    name: 'Helle',
+    founded: 'Founded 1932',
+    category: 'premium',
+    heritage: 'Norwegian knife craftsmanship from brothers who learned from village blacksmith',
+    specialty: 'Handcrafted knives from family farm blacksmith shop - Norway\'s leading manufacturer',
+    country: 'nordic',
+    type: 'knives',
+    links: [
+      { icon: '🇺🇸', label: 'Helle US Store', url: 'https://us.helle.com' },
+      { icon: '🇳🇴', label: 'Helle Norway', url: 'https://www.helle.com' },
+      { icon: '🇦🇺', label: 'Knife Shop Australia', url: 'https://www.knifeshopaustralia.com.au/brand/helle/' }
+    ]
+  },
+  {
+    id: 'mora',
+    name: 'Mora Knives',
+    founded: 'Founded 1891',
+    category: 'mid',
+    heritage: 'Swedish knife-making heritage with Royal Warrant from King of Sweden since 2011',
+    specialty: 'Traditional Swedish craftsmanship producing 4 million knives annually',
+    country: 'nordic',
+    type: 'knives',
+    links: [
+      { icon: '🇺🇸', label: 'Knives of the North', url: 'https://www.knivesofthenorth.com/collections/mora-knives' },
+      { icon: '🇦🇺', label: 'BNR Industrial', url: 'https://www.bnrindustrial.com.au/collections/morakniv-knives' },
+      { icon: '🇦🇺', label: 'Survival Supplies', url: 'https://www.survivalsupplies.com.au/brand/morakniv-knives' }
+    ]
+  },
+  
+  // Swiss Precision
+  {
+    id: 'victorinox',
+    name: 'Victorinox',
+    founded: 'Founded 1884',
+    category: 'mid',
+    heritage: 'Swiss precision with 500 million Swiss Army Knives produced since 1884',
+    specialty: 'Iconic multi-tool pocket knives - 60,000 produced daily with Swiss engineering excellence',
+    country: 'swiss',
+    type: 'knives',
+    links: [
+      { icon: '🇺🇸', label: 'Victorinox US', url: 'https://www.swissarmy.com' },
+      { icon: '🌍', label: 'Store Locator', url: 'https://www.victorinox.com/en/Victorinox/Victorinox-Stores/cms/our-stores/' },
+      { icon: '🇦🇺', label: 'Allgoods Australia', url: 'https://allgoods.com.au/collections/victorinox' }
+    ]
+  },
+  
+  // Spanish Heritage
+  {
+    id: 'pallares',
+    name: 'Pallarés Solsona',
+    founded: 'Founded 1917',
+    category: 'premium',
+    heritage: 'Spanish knife-making tradition from Solsona\'s 16th-century guild heritage',
+    specialty: 'Hand-sharpened knives from the sole surviving testimony to Solsona\'s renowned industry',
+    country: 'spanish',
+    type: 'knives',
+    links: [
+      { icon: '🇪🇸', label: 'Official Spain', url: 'https://www.pallaressolsona.com/en/' },
+      { icon: '🇺🇸', label: 'Knife Merchant', url: 'https://knifemerchant.com/knives/brands/pallares' },
+      { icon: '🇦🇺', label: 'Mr Kitly', url: 'https://mrkitly.com.au/collections/pallares-solsona' }
+    ]
+  },
+  
+  // Japanese Precision
+  {
+    id: 'mac-knives',
+    name: 'MAC Knives',
+    founded: 'Founded 1965',
+    category: 'premium',
+    heritage: 'Japanese innovation born from chef\'s accidental discovery in 1954 Chicago',
+    specialty: 'Precision Japanese steel with over 30 million MAC knives sold worldwide',
+    country: 'japanese',
+    type: 'knives',
+    links: [
+      { icon: '🇺🇸', label: 'Cutlery & More', url: 'https://cutleryandmore.com/pages/mac' },
+      { icon: '🇦🇺', label: 'Kitchenware Australia', url: 'https://www.kitchenware.com.au/mac-knives.html' },
+      { icon: '🇪🇺', label: 'Berondi Europe', url: 'https://berondi.com' }
+    ]
+  },
+  {
+    id: 'okatsune',
+    name: 'Okatsune',
+    founded: 'Founded 1940s',
+    category: 'luxury',
+    heritage: 'Japanese blacksmith mastery using Izumo Yasugi steel from Samurai Katana tradition',
+    specialty: 'Unrivaled Rockwell hardness of 60.0-61.0 with red and white happiness symbol handles',
+    country: 'japanese',
+    type: 'knives',
+    links: [
+      { icon: '🇺🇸', label: 'Niwaki US', url: 'https://www.niwaki.com/okatsune-secateurs/' },
+      { icon: '🇪🇺', label: 'Daitool Europe', url: 'https://daitool.com/collections/okatsune' },
+      { icon: '🇦🇺', label: 'NQ Trees', url: 'https://nqtrees.com.au/product/okatsune-pruning-shear-180mm-200mm-210mm/' }
+    ]
   }
 ];
 
@@ -453,6 +647,21 @@ export const countryData = {
     emoji: '🇳🇱',
     title: 'Dutch Sustainability',
     description: 'Modern Dutch innovation focused on natural materials and eco-friendly cookware'
+  },
+  swiss: {
+    emoji: '🇨🇭',
+    title: 'Swiss Precision',
+    description: 'Swiss engineering excellence with legendary precision and reliability'
+  },
+  spanish: {
+    emoji: '🇪🇸',
+    title: 'Spanish Heritage',
+    description: 'Traditional Spanish craftsmanship with centuries of blade-making expertise'
+  },
+  japanese: {
+    emoji: '🇯🇵',
+    title: 'Japanese Precision',
+    description: 'Legendary Japanese steel craftsmanship and innovative cutting technology'
   },
   global: {
     emoji: '🌍',

@@ -74,7 +74,7 @@ const CookwareDirectory = () => {
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <span className="text-2xl">🍳</span>
-            <h1 className="text-xl font-bold font-serif" style={{ color: 'var(--bifl-primary)' }}>BIFL Cookware</h1>
+            <h1 className="text-xl font-bold font-serif" style={{ color: 'var(--bifl-primary)' }}>BIFL Kitchen</h1>
           </div>
           
           {/* Desktop Navigation */}
@@ -135,10 +135,10 @@ const CookwareDirectory = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h1 className="text-4xl md:text-6xl font-bold font-serif mb-6 leading-tight">
-              Buy It For Life Cookware Directory
+              Buy It For Life Kitchen Directory
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/90 font-medium">
-              Stop Replacing. Start Investing. Find Heritage Cookware That Lasts Generations.
+              Stop Replacing. Start Investing. Find Heritage Kitchen Tools That Last Generations.
             </p>
             <Button
               onClick={() => scrollToSection('controls')}
@@ -160,14 +160,14 @@ const CookwareDirectory = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold font-serif text-center mb-8" style={{ color: 'var(--bifl-primary)' }}>
-              Find Your Perfect Heritage Cookware
+              Find Your Perfect Heritage Kitchen Tools
             </h2>
             
             {/* Search Box */}
             <div className="mb-8 relative">
               <Input
                 type="text"
-                placeholder="Search brands (e.g., Le Creuset, Staub, Fissler...)"
+                placeholder="Search brands (e.g., Le Creuset, Wüsthof, Staub, Sabatier...)"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-6 py-4 text-lg border-2 focus:border-blue-500"
@@ -274,7 +274,7 @@ const CookwareDirectory = () => {
           <div className="text-center max-w-4xl mx-auto">
             <div className="flex items-center justify-center gap-3 mb-6">
               <span className="text-3xl">🍳</span>
-              <h2 className="text-2xl font-bold font-serif">BIFL Cookware Directory</h2>
+              <h2 className="text-2xl font-bold font-serif">BIFL Kitchen Directory</h2>
             </div>
             
             <p className="text-lg text-white/90 mb-6 leading-relaxed">
