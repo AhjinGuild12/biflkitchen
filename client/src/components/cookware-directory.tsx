@@ -149,7 +149,7 @@ const CookwareDirectory = () => {
               }}
             >
               <span className="mr-2">🔍</span>
-              Explore Heritage Brands
+              Explore Heritage Kitchen Tools
             </Button>
           </div>
         </div>
@@ -228,6 +228,11 @@ const CookwareDirectory = () => {
                       <div className="absolute top-4 right-4 bifl-badge px-3 py-1 rounded-full text-sm font-bold text-white" style={{ backgroundColor: 'var(--bifl-secondary)' }}>
                         BIFL
                       </div>
+                      {brand.type === 'knives' && (
+                        <div className="absolute top-4 left-4 px-2 py-1 rounded-full text-xs font-bold text-white bg-gray-600">
+                          🔪 KNIVES
+                        </div>
+                      )}
                       <CardContent className="p-6">
                         <div className="flex items-center justify-between mb-4">
                           <h3 className="text-2xl font-bold font-serif" style={{ color: 'var(--bifl-primary)' }}>{brand.name}</h3>
