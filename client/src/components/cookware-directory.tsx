@@ -3,12 +3,16 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Menu, Search, ExternalLink } from 'lucide-react';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Menu, Search, ExternalLink, ChevronDown } from 'lucide-react';
 import { brands, countryData, type Brand } from '@/lib/brands-data';
 
 const CookwareDirectory = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedFilter, setSelectedFilter] = useState<'all' | 'budget' | 'mid' | 'premium' | 'luxury'>('all');
+  const [selectedCountry, setSelectedCountry] = useState<string>('all');
+  const [activeCategory, setActiveCategory] = useState<'cookware' | 'knives'>('cookware');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const filteredBrands = useMemo(() => {
@@ -18,10 +22,13 @@ const CookwareDirectory = () => {
                            brand.specialty.toLowerCase().includes(searchTerm.toLowerCase());
       
       const matchesFilter = selectedFilter === 'all' || brand.category === selectedFilter;
+      const matchesCountry = selectedCountry === 'all' || brand.country === selectedCountry;
+      const matchesCategory = (activeCategory === 'cookware' && !brand.type) || 
+                             (activeCategory === 'knives' && brand.type === 'knives');
       
-      return matchesSearch && matchesFilter;
+      return matchesSearch && matchesFilter && matchesCountry && matchesCategory;
     });
-  }, [searchTerm, selectedFilter]);
+  }, [searchTerm, selectedFilter, selectedCountry, activeCategory]);
 
   const brandsByCountry = useMemo(() => {
     const grouped: Record<string, Brand[]> = {};
@@ -77,48 +84,23 @@ const CookwareDirectory = () => {
             <h1 className="text-xl font-bold font-serif" style={{ color: 'var(--bifl-primary)' }}>BIFL Kitchen</h1>
           </div>
           
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
-            {Object.entries(countryData).map(([key, data]) => (
-              <button
-                key={key}
-                onClick={() => scrollToSection(key)}
-                className="font-medium transition-colors hover:opacity-80"
-                style={{ color: 'var(--bifl-primary)' }}
-              >
-                {data.emoji} {data.title.split(' ')[0]}
-              </button>
-            ))}
+          {/* Country Dropdown */}
+          <div className="flex items-center space-x-4">
+            <Select value={selectedCountry} onValueChange={setSelectedCountry}>
+              <SelectTrigger className="w-48">
+                <SelectValue placeholder="Select Country" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">🌍 All Countries</SelectItem>
+                {Object.entries(countryData).map(([key, data]) => (
+                  <SelectItem key={key} value={key}>
+                    {data.emoji} {data.title}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </div>
-          
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="sm"
-            className="md:hidden"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            <Menu className="w-6 h-6" />
-          </Button>
         </nav>
-        
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t" style={{ borderColor: 'var(--bifl-border)' }}>
-            <div className="container mx-auto px-4 py-4 space-y-2">
-              {Object.entries(countryData).map(([key, data]) => (
-                <button
-                  key={key}
-                  onClick={() => scrollToSection(key)}
-                  className="block w-full text-left py-2 font-medium transition-colors hover:opacity-80"
-                  style={{ color: 'var(--bifl-primary)' }}
-                >
-                  {data.emoji} {data.title}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
       </header>
 
       {/* Hero Section */}
@@ -163,11 +145,26 @@ const CookwareDirectory = () => {
               Find Your Perfect Heritage Kitchen Tools
             </h2>
             
+            {/* Category Tabs */}
+            <Tabs value={activeCategory} onValueChange={(value) => setActiveCategory(value as 'cookware' | 'knives')} className="mb-8">
+              <TabsList className="grid w-full max-w-md mx-auto grid-cols-2">
+                <TabsTrigger value="cookware" className="flex items-center gap-2">
+                  🍳 Cookware
+                </TabsTrigger>
+                <TabsTrigger value="knives" className="flex items-center gap-2">
+                  🔪 Knives
+                </TabsTrigger>
+              </TabsList>
+            </Tabs>
+
             {/* Search Box */}
             <div className="mb-8 relative">
               <Input
                 type="text"
-                placeholder="Search brands (e.g., Le Creuset, Wüsthof, Staub, Sabatier...)"
+                placeholder={activeCategory === 'cookware' ? 
+                  "Search cookware brands (e.g., Le Creuset, Staub, Fissler...)" : 
+                  "Search knife brands (e.g., Wüsthof, Sabatier, Henckels...)"
+                }
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-6 py-4 text-lg border-2 focus:border-blue-500"
@@ -228,11 +225,6 @@ const CookwareDirectory = () => {
                       <div className="absolute top-4 right-4 bifl-badge px-3 py-1 rounded-full text-sm font-bold text-white" style={{ backgroundColor: 'var(--bifl-secondary)' }}>
                         BIFL
                       </div>
-                      {brand.type === 'knives' && (
-                        <div className="absolute top-4 left-4 px-2 py-1 rounded-full text-xs font-bold text-white bg-gray-600">
-                          🔪 KNIVES
-                        </div>
-                      )}
                       <CardContent className="p-6">
                         <div className="flex items-center justify-between mb-4">
                           <h3 className="text-2xl font-bold font-serif" style={{ color: 'var(--bifl-primary)' }}>{brand.name}</h3>
@@ -292,7 +284,7 @@ const CookwareDirectory = () => {
             
             <div className="border-t border-white/20 pt-6">
               <p className="text-white/70">
-                © 2025 BIFL Cookware Directory | Last Updated: June 2025
+                © 2025 BIFL Kitchen Directory | Last Updated: July 2025
               </p>
             </div>
           </div>
