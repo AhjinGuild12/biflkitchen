@@ -6,7 +6,7 @@ export interface Brand {
   heritage: string;
   specialty: string;
   country: 'french' | 'german' | 'belgian' | 'italian' | 'nordic' | 'british' | 'australian' | 'canadian' | 'austrian' | 'thai' | 'dutch' | 'swiss' | 'spanish' | 'japanese' | 'global';
-  type?: 'cookware' | 'knives';
+  type?: 'cookware' | 'knives' | 'glassware';
   links: Array<{
     icon: string;
     label: string;
@@ -588,6 +588,108 @@ export const brands: Brand[] = [
       { icon: '🇺🇸', label: 'Niwaki US', url: 'https://www.niwaki.com/okatsune-secateurs/' },
       { icon: '🇪🇺', label: 'Daitool Europe', url: 'https://daitool.com/collections/okatsune' },
       { icon: '🇦🇺', label: 'NQ Trees', url: 'https://nqtrees.com.au/product/okatsune-pruning-shear-180mm-200mm-210mm/' }
+    ]
+  },
+
+  // GLASSWARE BRANDS
+  
+  // French Glass Innovation
+  {
+    id: 'duralex',
+    name: 'Duralex',
+    founded: 'Founded 1945',
+    category: 'premium',
+    heritage: 'Revolutionary inventors of glass tempering process in France - heating to 600°C for 2.5x impact resistance',
+    specialty: 'Iconic Picardie tumbler and Gigogne glass with unbreakable tempered glass technology',
+    country: 'french',
+    type: 'glassware',
+    links: [
+      { icon: '🇦🇺', label: 'Harris Scarfe', url: 'https://www.harrisscarfe.com.au/dalx/DALX' },
+      { icon: '🇦🇺', label: 'Kitchenware Australia', url: 'https://www.kitchenware.com.au/duralex.html' },
+      { icon: '🌏', label: 'Cedar Hospitality Asia', url: 'https://cedarhospitality.com/brand/duralex/' }
+    ]
+  },
+  
+  // Finnish Design Excellence
+  {
+    id: 'fiskars-glass',
+    name: 'Fiskars',
+    founded: 'Founded 1649',
+    category: 'premium',
+    heritage: 'One of world\'s oldest companies (375+ years) - from ironworks to modern glass design excellence',
+    specialty: 'Finnish design tradition from 1649 with distinctive craftsmanship and innovation',
+    country: 'nordic',
+    type: 'glassware',
+    links: [
+      { icon: '🌍', label: 'Global Locations', url: 'https://fiskarsgroup.com/contact-us/our-locations/' },
+      { icon: '🇺🇸', label: 'Amazon Official Store', url: 'https://www.amazon.com/stores/Fiskars' },
+      { icon: '🌏', label: 'Asia Distributors', url: 'https://fiskarsgroup.com/contact-us/our-locations/' }
+    ]
+  },
+  {
+    id: 'iittala',
+    name: 'Iittala',
+    founded: 'Founded 1881',
+    category: 'luxury',
+    heritage: 'Finnish glassmaking heritage with 17 Swedish glassblowers producing first objects in 1881',
+    specialty: 'Iconic Alvar Aalto Savoy Vase and collaborations with renowned Nordic designers',
+    country: 'nordic',
+    type: 'glassware',
+    links: [
+      { icon: '🇺🇸', label: 'FinnStyle US', url: 'https://www.finnstyle.com/iittala-shop-online.html' },
+      { icon: '🇬🇧', label: 'Iittala UK', url: 'https://www.iittala.com/en-gb' },
+      { icon: '🇦🇺', label: 'Gift & Co Australia', url: 'https://thegiftandco.com.au/collections/iittala' }
+    ]
+  },
+  
+  // German Precision Glass
+  {
+    id: 'schott-zwiesel',
+    name: 'Schott Zwiesel',
+    founded: 'Founded 1884',
+    category: 'luxury',
+    heritage: 'Founded by glass chemist Otto Schott with physicist Ernst Abbe and optician Carl Zeiss',
+    specialty: 'Scientific glass innovation transformed into precision crystal wine glasses',
+    country: 'german',
+    type: 'glassware',
+    links: [
+      { icon: '🇦🇺', label: 'Williams Sonoma AU', url: 'https://www.williams-sonoma.com.au/pure-bordeaux-glasses' },
+      { icon: '🇪🇺', label: 'Wine & Barrels EU', url: 'https://www.wineandbarrels.eu/shop/344-schott-zwiesel/' },
+      { icon: '🇦🇺', label: 'Nisbets Australia', url: 'https://www.nisbets.com.au/schott-zwiesel-pure-riesling-glass-300ml/dd230' }
+    ]
+  },
+  
+  // Italian Artisan Glass
+  {
+    id: 'bormioli-rocco',
+    name: 'Bormioli Rocco',
+    founded: 'Founded 1825',
+    category: 'premium',
+    heritage: 'Italian glass-making tradition from 1300 AD in Altare, with Luigi Bormioli founding in 1825',
+    specialty: 'Traditional Italian glass artistry combined with modern manufacturing excellence',
+    country: 'italian',
+    type: 'glassware',
+    links: [
+      { icon: '🇺🇸', label: 'Official US Store', url: 'https://bormioliroccous.com' },
+      { icon: '🇪🇺', label: 'Europe Site', url: 'https://bormiolirocco.com' },
+      { icon: '🇦🇺', label: 'Peter\'s of Kensington', url: 'https://www.petersofkensington.com.au/brands/bormioli-rocco/' }
+    ]
+  },
+  
+  // Swedish Porcelain Heritage
+  {
+    id: 'rorstrand',
+    name: 'Rörstrand',
+    founded: 'Founded 1726',
+    category: 'luxury',
+    heritage: 'Founded at Rörstrand Castle in Stockholm - Sweden\'s only porcelain factory until 1785',
+    specialty: 'Nearly 300 years of Scandinavian porcelain tradition for European nobility',
+    country: 'nordic',
+    type: 'glassware',
+    links: [
+      { icon: '🌍', label: 'Nordic Nest Global', url: 'https://www.nordicnest.com/brands/rorstrand/' },
+      { icon: '🇺🇸', label: 'Finnish Design Shop', url: 'https://www.finnishdesignshop.com/en-gb/manufacturer/rorstrand' },
+      { icon: '🇦🇺', label: 'Pamono Australia', url: 'https://www.pamono.com.au/makers/roerstrand/tableware' }
     ]
   }
 ];

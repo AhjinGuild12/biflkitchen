@@ -108,6 +108,11 @@ Changelog:
   * Added statistics section showing brand counts
   * Updated all branding from "BIFL Cookware" to "BIFL Kitchen"
   * Total: 46 heritage brands across 15 countries
+- July 1, 2025. Added premium glassware category
+  * Added 6 glassware brands: Duralex (France), Fiskars & Iittala (Finland), Schott Zwiesel (Germany), Bormioli Rocco (Italy), Rörstrand (Sweden)
+  * Extended category tabs to include 🥃 Glassware alongside Cookware and Knives
+  * Updated search functionality and statistics to include glassware
+  * Total: 52 heritage brands (33 cookware + 13 knives + 6 glassware) across 15 countries
 ```
 
 ## User Preferences
