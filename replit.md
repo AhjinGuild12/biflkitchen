@@ -101,6 +101,13 @@ This is a Buy It For Life (BIFL) Cookware Directory - a single-page application 
 ```
 Changelog:
 - June 27, 2025. Initial setup
+- July 1, 2025. Expanded to comprehensive kitchen directory with cookware and knives separation
+  * Added 13 knife brands across 6 countries (German, French, Nordic, Swiss, Spanish, Japanese)
+  * Replaced header navigation with country dropdown to reduce clutter
+  * Added category tabs to separate Cookware vs Knives
+  * Added statistics section showing brand counts
+  * Updated all branding from "BIFL Cookware" to "BIFL Kitchen"
+  * Total: 46 heritage brands across 15 countries
 ```
 
 ## User Preferences

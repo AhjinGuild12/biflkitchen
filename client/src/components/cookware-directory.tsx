@@ -265,6 +265,37 @@ const CookwareDirectory = () => {
         </div>
       </main>
 
+      {/* Stats Section */}
+      <section className="py-16 bg-white border-t" style={{ borderColor: 'var(--bifl-border)' }}>
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h3 className="text-2xl font-bold font-serif mb-8" style={{ color: 'var(--bifl-primary)' }}>
+              Directory Statistics
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="p-6 rounded-lg" style={{ backgroundColor: 'var(--bifl-cream)' }}>
+                <div className="text-3xl font-bold mb-2" style={{ color: 'var(--bifl-primary)' }}>
+                  {brands.filter(b => !b.type).length}
+                </div>
+                <div className="text-lg font-semibold">🍳 Cookware Brands</div>
+              </div>
+              <div className="p-6 rounded-lg" style={{ backgroundColor: 'var(--bifl-cream)' }}>
+                <div className="text-3xl font-bold mb-2" style={{ color: 'var(--bifl-primary)' }}>
+                  {brands.filter(b => b.type === 'knives').length}
+                </div>
+                <div className="text-lg font-semibold">🔪 Knife Brands</div>
+              </div>
+              <div className="p-6 rounded-lg" style={{ backgroundColor: 'var(--bifl-cream)' }}>
+                <div className="text-3xl font-bold mb-2" style={{ color: 'var(--bifl-primary)' }}>
+                  {Object.keys(countryData).length}
+                </div>
+                <div className="text-lg font-semibold">🌍 Countries</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="py-16 text-white" style={{ backgroundColor: 'var(--bifl-primary)' }}>
         <div className="container mx-auto px-4">
