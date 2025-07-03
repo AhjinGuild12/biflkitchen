@@ -334,9 +334,22 @@ const CookwareDirectory = () => {
               Curated by Buy It For Life enthusiasts for those who believe in purchasing quality once rather than replacing items multiple times.
             </p>
             
-            <p className="font-semibold mb-6" style={{ color: 'var(--bifl-secondary)' }}>
-              Made with ❤️ for the r/BuyItForLife community
-            </p>
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <p className="font-semibold" style={{ color: 'var(--bifl-secondary)' }}>
+                Made by Jan M.
+              </p>
+              <span className="text-white/40">|</span>
+              <a 
+                href="https://x.com/jannotjohnn" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-blue-400 transition-colors"
+                style={{ color: 'var(--bifl-secondary)' }}
+              >
+                <span>🐦</span>
+                <span>Follow on X</span>
+              </a>
+            </div>
             
             <div className="border-t border-white/20 pt-6">
               <p className="text-white/70">
