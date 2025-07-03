@@ -113,6 +113,11 @@ Changelog:
   * Extended category tabs to include 🥃 Glassware alongside Cookware and Knives
   * Updated search functionality and statistics to include glassware
   * Total: 52 heritage brands (33 cookware + 13 knives + 6 glassware) across 15 countries
+- July 1, 2025. Added coffee equipment category
+  * Added 14 coffee equipment brands across 7 countries: ECM & Profitec (Germany), JURA (Switzerland), 3TEMP & Bodum (Nordic), La Pavoni & Bialetti (Italy), Chemex (Global), Canadiano (Canada), Moccamaster (Netherlands), Hario & Kalita (Japan)
+  * Extended to 4-category tabs: 🍳 Cookware, 🔪 Knives, 🥃 Glassware, ☕ Coffee
+  * Updated interface with 5-column statistics layout and coffee-specific search examples
+  * Total: 66 heritage brands (33 cookware + 13 knives + 6 glassware + 14 coffee) across 15 countries
 ```
 
 ## User Preferences

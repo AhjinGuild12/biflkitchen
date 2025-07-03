@@ -12,7 +12,7 @@ const CookwareDirectory = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedFilter, setSelectedFilter] = useState<'all' | 'budget' | 'mid' | 'premium' | 'luxury'>('all');
   const [selectedCountry, setSelectedCountry] = useState<string>('all');
-  const [activeCategory, setActiveCategory] = useState<'cookware' | 'knives' | 'glassware'>('cookware');
+  const [activeCategory, setActiveCategory] = useState<'cookware' | 'knives' | 'glassware' | 'coffee'>('cookware');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const filteredBrands = useMemo(() => {
@@ -25,7 +25,8 @@ const CookwareDirectory = () => {
       const matchesCountry = selectedCountry === 'all' || brand.country === selectedCountry;
       const matchesCategory = (activeCategory === 'cookware' && !brand.type) || 
                              (activeCategory === 'knives' && brand.type === 'knives') ||
-                             (activeCategory === 'glassware' && brand.type === 'glassware');
+                             (activeCategory === 'glassware' && brand.type === 'glassware') ||
+                             (activeCategory === 'coffee' && brand.type === 'coffee');
       
       return matchesSearch && matchesFilter && matchesCountry && matchesCategory;
     });
@@ -147,8 +148,8 @@ const CookwareDirectory = () => {
             </h2>
             
             {/* Category Tabs */}
-            <Tabs value={activeCategory} onValueChange={(value) => setActiveCategory(value as 'cookware' | 'knives' | 'glassware')} className="mb-8">
-              <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-3">
+            <Tabs value={activeCategory} onValueChange={(value) => setActiveCategory(value as 'cookware' | 'knives' | 'glassware' | 'coffee')} className="mb-8">
+              <TabsList className="grid w-full max-w-4xl mx-auto grid-cols-4">
                 <TabsTrigger value="cookware" className="flex items-center gap-2">
                   🍳 Cookware
                 </TabsTrigger>
@@ -157,6 +158,9 @@ const CookwareDirectory = () => {
                 </TabsTrigger>
                 <TabsTrigger value="glassware" className="flex items-center gap-2">
                   🥃 Glassware
+                </TabsTrigger>
+                <TabsTrigger value="coffee" className="flex items-center gap-2">
+                  ☕ Coffee
                 </TabsTrigger>
               </TabsList>
             </Tabs>
@@ -170,7 +174,9 @@ const CookwareDirectory = () => {
                     "Search cookware brands (e.g., Le Creuset, Staub, Fissler...)" : 
                   activeCategory === 'knives' ?
                     "Search knife brands (e.g., Wüsthof, Sabatier, Henckels...)" :
-                    "Search glassware brands (e.g., Iittala, Duralex, Schott Zwiesel...)"
+                  activeCategory === 'glassware' ?
+                    "Search glassware brands (e.g., Iittala, Duralex, Schott Zwiesel...)" :
+                    "Search coffee equipment (e.g., JURA, Chemex, Hario, La Pavoni...)"
                 }
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
@@ -279,24 +285,30 @@ const CookwareDirectory = () => {
             <h3 className="text-2xl font-bold font-serif mb-8" style={{ color: 'var(--bifl-primary)' }}>
               Directory Statistics
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
               <div className="p-6 rounded-lg" style={{ backgroundColor: 'var(--bifl-cream)' }}>
                 <div className="text-3xl font-bold mb-2" style={{ color: 'var(--bifl-primary)' }}>
                   {brands.filter(b => !b.type).length}
                 </div>
-                <div className="text-lg font-semibold">🍳 Cookware Brands</div>
+                <div className="text-lg font-semibold">🍳 Cookware</div>
               </div>
               <div className="p-6 rounded-lg" style={{ backgroundColor: 'var(--bifl-cream)' }}>
                 <div className="text-3xl font-bold mb-2" style={{ color: 'var(--bifl-primary)' }}>
                   {brands.filter(b => b.type === 'knives').length}
                 </div>
-                <div className="text-lg font-semibold">🔪 Knife Brands</div>
+                <div className="text-lg font-semibold">🔪 Knives</div>
               </div>
               <div className="p-6 rounded-lg" style={{ backgroundColor: 'var(--bifl-cream)' }}>
                 <div className="text-3xl font-bold mb-2" style={{ color: 'var(--bifl-primary)' }}>
                   {brands.filter(b => b.type === 'glassware').length}
                 </div>
-                <div className="text-lg font-semibold">🥃 Glassware Brands</div>
+                <div className="text-lg font-semibold">🥃 Glassware</div>
+              </div>
+              <div className="p-6 rounded-lg" style={{ backgroundColor: 'var(--bifl-cream)' }}>
+                <div className="text-3xl font-bold mb-2" style={{ color: 'var(--bifl-primary)' }}>
+                  {brands.filter(b => b.type === 'coffee').length}
+                </div>
+                <div className="text-lg font-semibold">☕ Coffee</div>
               </div>
               <div className="p-6 rounded-lg" style={{ backgroundColor: 'var(--bifl-cream)' }}>
                 <div className="text-3xl font-bold mb-2" style={{ color: 'var(--bifl-primary)' }}>

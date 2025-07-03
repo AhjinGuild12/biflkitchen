@@ -6,7 +6,7 @@ export interface Brand {
   heritage: string;
   specialty: string;
   country: 'french' | 'german' | 'belgian' | 'italian' | 'nordic' | 'british' | 'australian' | 'canadian' | 'austrian' | 'thai' | 'dutch' | 'swiss' | 'spanish' | 'japanese' | 'global';
-  type?: 'cookware' | 'knives' | 'glassware';
+  type?: 'cookware' | 'knives' | 'glassware' | 'coffee';
   links: Array<{
     icon: string;
     label: string;
@@ -690,6 +690,205 @@ export const brands: Brand[] = [
       { icon: '🌍', label: 'Nordic Nest Global', url: 'https://www.nordicnest.com/brands/rorstrand/' },
       { icon: '🇺🇸', label: 'Finnish Design Shop', url: 'https://www.finnishdesignshop.com/en-gb/manufacturer/rorstrand' },
       { icon: '🇦🇺', label: 'Pamono Australia', url: 'https://www.pamono.com.au/makers/roerstrand/tableware' }
+    ]
+  },
+
+  // COFFEE EQUIPMENT BRANDS
+  
+  // German Engineering Excellence
+  {
+    id: 'ecm',
+    name: 'ECM Coffee Machines',
+    founded: 'Founded 1996',
+    category: 'luxury',
+    heritage: 'German precision engineering with Italian design - handmade dual-boiler systems near Heidelberg',
+    specialty: 'Cafe-quality espresso through advanced PID temperature control and commercial-grade components',
+    country: 'german',
+    type: 'coffee',
+    links: [
+      { icon: '🇺🇸', label: 'Whole Latte Love', url: 'https://www.wholelattelove.com/collections/ecm' },
+      { icon: '🇺🇸', label: 'Pro Coffee Gear', url: 'https://procoffeegear.com/collections/ecm' },
+      { icon: '🇦🇺', label: 'Coffee Machine Warehouse', url: 'https://coffeemachinewarehouse.com.au/collections/ecm' }
+    ]
+  },
+  {
+    id: 'profitec',
+    name: 'Profitec',
+    founded: 'Founded 1985',
+    category: 'luxury',
+    heritage: 'Premium handmade espresso machines combining German engineering with Italian design',
+    specialty: 'Creating "magic you can drink" through purist design and high-performance brewing systems',
+    country: 'german',
+    type: 'coffee',
+    links: [
+      { icon: '🇨🇦', label: 'Home Coffee Solutions', url: 'https://www.homecoffeesolutions.com/products/profitec-pro-500-espresso-machine-with-pid' },
+      { icon: '🇩🇪', label: 'Magazin Germany', url: 'https://en.magazin.com/profitec-go-a211214/' },
+      { icon: '🇦🇺', label: 'Eastlink Espresso', url: 'https://eastlinkespresso.com.au/product/profitec-pro-500/' }
+    ]
+  },
+  
+  // Swiss Precision Innovation
+  {
+    id: 'jura',
+    name: 'JURA',
+    founded: 'Founded 1931',
+    category: 'luxury',
+    heritage: 'Swiss automatic espresso pioneer with 9-year average service life - 3 years above industry standard',
+    specialty: 'Fully automatic espresso concept with integrated grinding, dosing, tamping, and brewing',
+    country: 'swiss',
+    type: 'coffee',
+    links: [
+      { icon: '🇺🇸', label: 'JURA USA Official', url: 'https://us.jura.com/en/homeproducts/machines' },
+      { icon: '🏪', label: 'Williams Sonoma', url: 'https://www.williams-sonoma.com/shop/electrics/electrics-jura/' },
+      { icon: '🇦🇺', label: 'JURA Australia', url: 'https://au.jura.com/en/homeproducts/machines' }
+    ]
+  },
+  
+  // Swedish Innovation
+  {
+    id: 'threetemp',
+    name: '3TEMP',
+    founded: 'Founded 2014',
+    category: 'premium',
+    heritage: 'Swedish innovation winning "Best All-Round Filter Brewer" at London Coffee Festival 2022',
+    specialty: 'Three-temperature brewing system with tankless design consuming only 3.9 watts when idle',
+    country: 'nordic',
+    type: 'coffee',
+    links: [
+      { icon: '🇨🇦', label: 'Genius Equipment', url: 'https://www.geniusequipment.com/collections/3temp' },
+      { icon: '🇪🇺', label: '3TEMP Europe', url: 'https://3temp.com/buy-a-3temp-brewer/europe/' },
+      { icon: '🌍', label: 'Official Website', url: 'https://3temp.com' }
+    ]
+  },
+  
+  // Italian Heritage & Tradition
+  {
+    id: 'la-pavoni',
+    name: 'La Pavoni',
+    founded: 'Founded 1905',
+    category: 'luxury',
+    heritage: 'Pioneer of espresso industry with first machine "Ideale" and domestic Europiccola in 1961',
+    specialty: 'True Italian tradition through artistic excellence in reliable espresso machine design',
+    country: 'italian',
+    type: 'coffee',
+    links: [
+      { icon: '🇺🇸', label: 'Coffeeionado', url: 'https://www.coffeeionado.com/products/copy-of-la-pavoni-dia-2-group' },
+      { icon: '🌍', label: 'Store Locator', url: 'https://www.lapavoni.com/en/store-locator' },
+      { icon: '🇦🇺', label: 'Euroespresso', url: 'https://www.euroespresso.com.au' }
+    ]
+  },
+  {
+    id: 'bialetti',
+    name: 'Bialetti',
+    founded: 'Founded 1919',
+    category: 'budget',
+    heritage: 'Revolutionary 1933 Moka Express found in 90% of Italian households - 300+ million units sold',
+    specialty: 'Octagonal aluminum stovetop espresso maker representing essence of Italian coffee culture',
+    country: 'italian',
+    type: 'coffee',
+    links: [
+      { icon: '🇪🇺', label: 'Piccantino International', url: 'https://www.piccantino.com/bialetti' },
+      { icon: '🇦🇺', label: 'Finnish Design Shop', url: 'https://www.finnishdesignshop.com/en-au/product/moka-express-oceana-espresso-maker-2-cups' },
+      { icon: '🇦🇺', label: 'My Coffee Shop', url: 'https://mycoffeeshop.com.au/collections/bialetti-coffee-makers-coffee' }
+    ]
+  },
+  
+  // American Innovation
+  {
+    id: 'chemex',
+    name: 'Chemex',
+    founded: 'Founded 1941',
+    category: 'premium',
+    heritage: 'Invented by German chemist Dr. Peter Schlumbohm - one of 100 best designed products of modern times',
+    specialty: 'Hourglass glass vessel with special bonded filters removing fats, bitterness, and sediments',
+    country: 'global',
+    type: 'coffee',
+    links: [
+      { icon: '🇺🇸', label: 'Chemex Official', url: 'https://chemexcoffeemaker.com/products/six-cup-classic-chemex' },
+      { icon: '🏪', label: 'Williams Sonoma', url: 'https://www.williams-sonoma.com/chemex-wood-collar-glass-coffeemaker' },
+      { icon: '🇦🇺', label: 'Coffee Supreme', url: 'https://shopau.coffeesupreme.com/products/chemex-coffee-maker-classic-series' }
+    ]
+  },
+  
+  // Canadian Sustainability
+  {
+    id: 'canadiano',
+    name: 'Canadiano',
+    founded: 'Founded 2010s',
+    category: 'premium',
+    heritage: 'B Corp certified sustainable coffee maker carved from single blocks of Canadian hardwood',
+    specialty: 'Zero-waste, zero-plastic pour-over requiring no paper filters with wood memory technology',
+    country: 'canadian',
+    type: 'coffee',
+    links: [
+      { icon: '🌍', label: 'Canadiano Official', url: 'https://canadiano.co' },
+      { icon: '🏪', label: 'Faire Wholesale', url: 'https://www.faire.com/brand/b_6uamoekldt' }
+    ]
+  },
+  
+  // Netherlands Precision
+  {
+    id: 'moccamaster',
+    name: 'Technivorm Moccamaster',
+    founded: 'Founded 1964',
+    category: 'premium',
+    heritage: 'Dutch handmade perfection since 1964 - one of few brewers certified by Specialty Coffee Association',
+    specialty: 'Copper heating elements maintaining 195-205°F for Golden Cup Standard filter coffee',
+    country: 'dutch',
+    type: 'coffee',
+    links: [
+      { icon: '🇺🇸', label: 'Technivorm Official', url: 'https://thetechnivorm.com' },
+      { icon: '🏪', label: 'Williams Sonoma', url: 'https://www.williams-sonoma.com/shop/electrics/electrics-technivorm/' },
+      { icon: '🇦🇺', label: 'Coffee Parts', url: 'https://www.coffeeparts.com.au/brands/moccamaster' }
+    ]
+  },
+  
+  // Danish Design Excellence
+  {
+    id: 'bodum',
+    name: 'Bodum',
+    founded: 'Founded 1944',
+    category: 'mid',
+    heritage: 'Danish design heritage from Copenhagen with revolutionary Chambord French press',
+    specialty: 'Environmentally friendly reusable brewing eliminating paper waste while enhancing flavor',
+    country: 'nordic',
+    type: 'coffee',
+    links: [
+      { icon: '🇺🇸', label: 'Bodum Official', url: 'https://www.bodum.com' },
+      { icon: '🏪', label: 'MoMA Design Store', url: 'https://store.moma.org/products/bodum-special-edition-french-press-set-of-11' },
+      { icon: '🇦🇺', label: 'Minimax', url: 'https://www.minimax.com.au/products/bodum-chambord-french-press-coffee-maker-12cup' }
+    ]
+  },
+  
+  // Japanese Coffee Equipment
+  {
+    id: 'hario',
+    name: 'Hario',
+    founded: 'Founded 1921',
+    category: 'premium',
+    heritage: 'Japanese heat-resistant glassware specialist with V60 dripper synonymous with pour-over culture',
+    specialty: 'Precision brewing equipment allowing complete control over extraction variables',
+    country: 'japanese',
+    type: 'coffee',
+    links: [
+      { icon: '🇺🇸', label: 'Hario USA', url: 'https://www.hario-usa.com' },
+      { icon: '🌍', label: 'Global Store Locator', url: 'https://global.hario.com/wheretobuy/' },
+      { icon: '🇦🇺', label: 'Everyday Coffee', url: 'https://everyday-coffee.com/products/hario-v60-pour-over' }
+    ]
+  },
+  {
+    id: 'kalita',
+    name: 'Kalita',
+    founded: 'Founded 1958',
+    category: 'premium',
+    heritage: 'Japanese Wave dripper trusted by top specialty cafes and professional competition baristas',
+    specialty: 'Innovative flat-bottom geometry with three-hole drainage system for temperature stability',
+    country: 'japanese',
+    type: 'coffee',
+    links: [
+      { icon: '🇬🇧', label: 'Machina Coffee UK', url: 'https://machina-coffee.com/products/kalita-wave-dripper-185-metal' },
+      { icon: '🇦🇺', label: 'Brew Methods', url: 'https://brewmethods.com.au/products/kalita-wave-glass-dripper' },
+      { icon: '🇦🇺', label: 'Coffee Parts', url: 'https://www.coffeeparts.com.au/brands/kalita' }
     ]
   }
 ];
