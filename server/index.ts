@@ -6,6 +6,12 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// Add environment variable logging for debugging
+const nodeEnv = process.env.NODE_ENV || "development";
+const hasDatabase = !!process.env.DATABASE_URL;
+log(`Starting server in ${nodeEnv} mode`);
+log(`Database URL configured: ${hasDatabase ? "Yes" : "No"}`);
+
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
@@ -36,35 +42,88 @@ app.use((req, res, next) => {
   next();
 });
 
-(async () => {
-  const server = await registerRoutes(app);
+// Graceful error handling for server startup
+async function startServer() {
+  try {
+    log("Initializing server...");
+    
+    const server = await registerRoutes(app);
 
-  app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
-    const status = err.status || err.statusCode || 500;
-    const message = err.message || "Internal Server Error";
+    app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
+      const status = err.status || err.statusCode || 500;
+      const message = err.message || "Internal Server Error";
 
-    res.status(status).json({ message });
-    throw err;
-  });
+      log(`Error: ${message} (Status: ${status})`);
+      res.status(status).json({ message });
+      
+      // Don't throw in production to prevent server crashes
+      if (nodeEnv === "development") {
+        throw err;
+      }
+    });
 
-  // importantly only setup vite in development and after
-  // setting up all the other routes so the catch-all route
-  // doesn't interfere with the other routes
-  if (app.get("env") === "development") {
-    await setupVite(app, server);
-  } else {
-    serveStatic(app);
+    // importantly only setup vite in development and after
+    // setting up all the other routes so the catch-all route
+    // doesn't interfere with the other routes
+    if (nodeEnv === "development") {
+      log("Setting up Vite development server...");
+      await setupVite(app, server);
+    } else {
+      log("Setting up static file serving...");
+      serveStatic(app);
+    }
+
+    // ALWAYS serve the app on port 5000
+    // this serves both the API and the client.
+    // It is the only port that is not firewalled.
+    const port = 5000;
+    
+    server.listen({
+      port,
+      host: "0.0.0.0",
+      reusePort: true,
+    }, () => {
+      log(`Server successfully started on port ${port}`);
+      log(`Environment: ${nodeEnv}`);
+      log(`Ready to accept connections`);
+    });
+
+    // Handle server errors
+    server.on("error", (err) => {
+      log(`Server error: ${err.message}`, "error");
+      if (nodeEnv === "production") {
+        // In production, try to gracefully handle the error
+        process.exit(1);
+      } else {
+        throw err;
+      }
+    });
+
+  } catch (error) {
+    log(`Failed to start server: ${error instanceof Error ? error.message : String(error)}`, "error");
+    
+    // Log additional debugging information
+    if (error instanceof Error) {
+      log(`Stack trace: ${error.stack}`, "error");
+    }
+    
+    // Exit with error code for deployment systems
+    process.exit(1);
   }
+}
 
-  // ALWAYS serve the app on port 5000
-  // this serves both the API and the client.
-  // It is the only port that is not firewalled.
-  const port = 5000;
-  server.listen({
-    port,
-    host: "0.0.0.0",
-    reusePort: true,
-  }, () => {
-    log(`serving on port ${port}`);
-  });
-})();
+// Handle unhandled promise rejections
+process.on('unhandledRejection', (reason, promise) => {
+  log(`Unhandled Rejection at: ${promise}, reason: ${reason}`, "error");
+  process.exit(1);
+});
+
+// Handle uncaught exceptions
+process.on('uncaughtException', (error) => {
+  log(`Uncaught Exception: ${error.message}`, "error");
+  log(`Stack trace: ${error.stack}`, "error");
+  process.exit(1);
+});
+
+// Start the server
+startServer();
