@@ -5,7 +5,7 @@ export interface Brand {
   category: 'budget' | 'mid' | 'premium' | 'luxury';
   heritage: string;
   specialty: string;
-  country: 'french' | 'german' | 'belgian' | 'italian' | 'nordic' | 'british' | 'australian' | 'canadian' | 'austrian' | 'thai' | 'dutch' | 'swiss' | 'spanish' | 'japanese' | 'global';
+  country: 'french' | 'german' | 'belgian' | 'italian' | 'nordic' | 'british' | 'australian' | 'canadian' | 'austrian' | 'thai' | 'dutch' | 'swiss' | 'spanish' | 'japanese' | 'american' | 'global';
   type?: 'cookware' | 'knives' | 'glassware' | 'coffee';
   links: Array<{
     icon: string;
@@ -398,8 +398,37 @@ export const brands: Brand[] = [
     ]
   },
 
+  // American Craftsmanship
+  {
+    id: 'all-clad',
+    name: 'All-Clad',
+    founded: 'Founded 1971',
+    category: 'premium',
+    heritage: 'American stainless steel cookware hand-assembled in Pennsylvania since 1971',
+    specialty: 'Bonded tri-ply and copper-core stainless loved by Thomas Keller, David Chang, and r/BuyItForLife',
+    country: 'american',
+    links: [
+      { icon: '🏪', label: 'All-Clad Official', url: 'https://www.all-clad.com' },
+      { icon: '🛍️', label: 'Williams Sonoma Collection', url: 'https://www.williams-sonoma.com/shop/cookware/cookware-all-clad/' },
+      { icon: '🛒', label: 'Amazon Collection', url: 'https://amzn.to/4vr5Ugz' }
+    ]
+  },
+  {
+    id: 'lodge',
+    name: 'Lodge',
+    founded: 'Founded 1896',
+    category: 'budget',
+    heritage: 'America\'s oldest family-owned cast iron foundry in South Pittsburg, Tennessee since 1896',
+    specialty: 'Pre-seasoned cast iron and enameled Dutch ovens with a lifetime warranty at accessible prices',
+    country: 'american',
+    links: [
+      { icon: '🏪', label: 'Lodge Cast Iron Official', url: 'https://www.lodgecastiron.com' },
+      { icon: '🛒', label: 'Amazon Collection', url: 'https://amzn.to/41uudfN' }
+    ]
+  },
+
   // KNIFE BRANDS
-  
+
   // German Knife Masters
   {
     id: 'wusthof',
@@ -588,6 +617,52 @@ export const brands: Brand[] = [
       { icon: '🇺🇸', label: 'Niwaki US', url: 'https://www.niwaki.com/okatsune-secateurs/' },
       { icon: '🇪🇺', label: 'Daitool Europe', url: 'https://daitool.com/collections/okatsune' },
       { icon: '🇦🇺', label: 'NQ Trees', url: 'https://nqtrees.com.au/product/okatsune-pruning-shear-180mm-200mm-210mm/' }
+    ]
+  },
+  {
+    id: 'tojiro',
+    name: 'Tojiro',
+    founded: 'Founded 1953',
+    category: 'mid',
+    heritage: 'Niigata\'s Fujitora Industry — engineering-led Japanese knife makers since 1953',
+    specialty: 'DP series VG-10 steel gyutos — Reddit\'s near-universal "best value Japanese knife" under $100',
+    country: 'japanese',
+    type: 'knives',
+    links: [
+      { icon: '🏪', label: 'Tojiro Global', url: 'https://tojiro.net/en/' },
+      { icon: '🇺🇸', label: 'Chef Knives To Go', url: 'https://www.chefknivestogo.com/tojiro.html' },
+      { icon: '🛒', label: 'Amazon Knife Collection', url: 'https://amzn.to/3Oce0ZN' }
+    ]
+  },
+  {
+    id: 'shun',
+    name: 'Shun',
+    founded: 'Founded 1908 (Kai Corp)',
+    category: 'premium',
+    heritage: 'Kai Corporation\'s premium line from Seki City — blending traditional Japanese craftsmanship with modern steel technology',
+    specialty: 'Damascus-clad VG-MAX and SG2 gyutos with lacquered pakkawood handles — the most recognized Japanese knife in the West',
+    country: 'japanese',
+    type: 'knives',
+    links: [
+      { icon: '🏪', label: 'Shun Official', url: 'https://shun.kaiusa.com' },
+      { icon: '🛍️', label: 'Williams Sonoma', url: 'https://www.williams-sonoma.com/shop/cutlery/cutlery-shun/' },
+      { icon: '🔪', label: 'Premier 8" Chef\'s Knife', url: 'https://amzn.to/4cn3dUH' },
+      { icon: '🛒', label: 'Amazon Collection', url: 'https://amzn.to/48GYjR4' }
+    ]
+  },
+  {
+    id: 'masamoto',
+    name: 'Masamoto',
+    founded: 'Founded 1845',
+    category: 'luxury',
+    heritage: 'Tokyo\'s legendary Tsukiji-district knife maker — supplying Michelin-starred sushi chefs since 1845',
+    specialty: 'Hand-forged Honyaki and Kasumi single-bevel blades (yanagiba, deba, usuba) — the gold standard for traditional Japanese cuisine',
+    country: 'japanese',
+    type: 'knives',
+    links: [
+      { icon: '🏪', label: 'Masamoto Official', url: 'https://www.masamoto-sohonten.co.jp/en/' },
+      { icon: '🇺🇸', label: 'Korin', url: 'https://korin.com/collections/masamoto' },
+      { icon: '🌍', label: 'Japanny', url: 'https://japanny.com/collections/masamoto' }
     ]
   },
 
@@ -963,6 +1038,11 @@ export const countryData = {
     emoji: '🇯🇵',
     title: 'Japanese Precision',
     description: 'Legendary Japanese steel craftsmanship and innovative cutting technology'
+  },
+  american: {
+    emoji: '🇺🇸',
+    title: 'American Craftsmanship',
+    description: 'Iconic American cookware heritage — from Pennsylvania stainless to Tennessee cast iron'
   },
   global: {
     emoji: '🌍',
