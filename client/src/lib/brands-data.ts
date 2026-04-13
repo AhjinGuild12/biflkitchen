@@ -44,6 +44,19 @@ export const brands: Brand[] = [
     ]
   },
   {
+    id: 'matfer-bourgeat',
+    name: 'Matfer Bourgeat',
+    founded: 'Founded 1814',
+    category: 'premium',
+    heritage: 'French professional-grade cookware supplier to Michelin kitchens since 1814',
+    specialty: 'Pro carbon steel frypans and black-steel cookware — the quiet peer to De Buyer in commercial French kitchens',
+    country: 'french',
+    links: [
+      { icon: '🏪', label: 'Matfer Bourgeat USA', url: 'https://www.matferbourgeatusa.com' },
+      { icon: '🛒', label: 'Amazon Collection', url: 'https://www.amazon.com/s?k=matfer+bourgeat' }
+    ]
+  },
+  {
     id: 'mauviel',
     name: 'Mauviel',
     founded: 'Founded 1830',
@@ -424,6 +437,58 @@ export const brands: Brand[] = [
     links: [
       { icon: '🏪', label: 'Lodge Cast Iron Official', url: 'https://www.lodgecastiron.com' },
       { icon: '🛒', label: 'Amazon Collection', url: 'https://amzn.to/41uudfN' }
+    ]
+  },
+  {
+    id: 'smithey',
+    name: 'Smithey Ironware',
+    founded: 'Founded 2015',
+    category: 'premium',
+    heritage: 'Charleston, SC cast iron revival — heirloom skillets with hand-polished glassy-smooth cooking surfaces',
+    specialty: 'Boutique US cast iron that arrives pre-seasoned and mirror-smooth — The Kitchn\'s "best for most" pick above Lodge',
+    country: 'american',
+    links: [
+      { icon: '🏪', label: 'Smithey Official', url: 'https://www.smithey.com' },
+      { icon: '🛒', label: 'Amazon Collection', url: 'https://www.amazon.com/s?k=smithey+ironware' }
+    ]
+  },
+  {
+    id: 'field-company',
+    name: 'Field Company',
+    founded: 'Founded 2016',
+    category: 'premium',
+    heritage: 'American cast iron reimagined — Wisconsin and Indiana foundries making lighter, smoother skillets',
+    specialty: 'Precision-machined lightweight cast iron (4.3 lbs for 10.25") — r/castiron\'s daily-driver favorite',
+    country: 'american',
+    links: [
+      { icon: '🏪', label: 'Field Company Official', url: 'https://fieldcompany.com' },
+      { icon: '🛒', label: 'Amazon Collection', url: 'https://www.amazon.com/s?k=field+company+cast+iron' }
+    ]
+  },
+  {
+    id: 'usa-pan',
+    name: 'USA Pan',
+    founded: 'Founded 1959',
+    category: 'mid',
+    heritage: 'American-made aluminized steel bakeware from Pennsylvania since 1959',
+    specialty: 'Sheet pans, loaf pans, and muffin tins with silicone non-stick — Prudent Reviews\' top sheet-pan pick',
+    country: 'american',
+    links: [
+      { icon: '🏪', label: 'USA Pan Official', url: 'https://www.usapan.com' },
+      { icon: '🛒', label: 'Amazon Collection', url: 'https://www.amazon.com/s?k=usa+pan+bakeware' }
+    ]
+  },
+  {
+    id: 'nordic-ware',
+    name: 'Nordic Ware',
+    founded: 'Founded 1946',
+    category: 'mid',
+    heritage: 'Minneapolis family-owned bakeware pioneer since 1946 — inventor of the Bundt pan',
+    specialty: 'Pure aluminum sheet pans and cast aluminum Bundt/specialty molds — the BIFL value pick for bakers',
+    country: 'american',
+    links: [
+      { icon: '🏪', label: 'Nordic Ware Official', url: 'https://www.nordicware.com' },
+      { icon: '🛒', label: 'Amazon Collection', url: 'https://www.amazon.com/s?k=nordic+ware' }
     ]
   },
 
