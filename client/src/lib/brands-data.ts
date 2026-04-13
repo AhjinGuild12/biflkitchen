@@ -53,7 +53,7 @@ export const brands: Brand[] = [
     country: 'french',
     links: [
       { icon: '🏪', label: 'Matfer Bourgeat USA', url: 'https://www.matferbourgeatusa.com' },
-      { icon: '🛒', label: 'Amazon Collection', url: 'https://www.amazon.com/s?k=matfer+bourgeat' }
+      { icon: '🛒', label: 'Amazon Collection', url: 'https://amzn.to/4cDox9E' }
     ]
   },
   {
@@ -462,7 +462,7 @@ export const brands: Brand[] = [
     country: 'american',
     links: [
       { icon: '🏪', label: 'Field Company Official', url: 'https://fieldcompany.com' },
-      { icon: '🛒', label: 'Amazon Collection', url: 'https://www.amazon.com/s?k=field+company+cast+iron' }
+      { icon: '🛒', label: 'Amazon Collection', url: 'https://amzn.to/4tM6eF6' }
     ]
   },
   {
@@ -475,7 +475,7 @@ export const brands: Brand[] = [
     country: 'american',
     links: [
       { icon: '🏪', label: 'USA Pan Official', url: 'https://www.usapan.com' },
-      { icon: '🛒', label: 'Amazon Collection', url: 'https://www.amazon.com/s?k=usa+pan+bakeware' }
+      { icon: '🛒', label: 'Amazon Collection', url: 'https://amzn.to/4syT4dF' }
     ]
   },
   {
@@ -488,7 +488,7 @@ export const brands: Brand[] = [
     country: 'american',
     links: [
       { icon: '🏪', label: 'Nordic Ware Official', url: 'https://www.nordicware.com' },
-      { icon: '🛒', label: 'Amazon Collection', url: 'https://www.amazon.com/s?k=nordic+ware' }
+      { icon: '🛒', label: 'Amazon Collection', url: 'https://amzn.to/4sO1NJ7' }
     ]
   },
 
