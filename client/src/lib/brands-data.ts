@@ -448,8 +448,7 @@ export const brands: Brand[] = [
     specialty: 'Boutique US cast iron that arrives pre-seasoned and mirror-smooth — The Kitchn\'s "best for most" pick above Lodge',
     country: 'american',
     links: [
-      { icon: '🏪', label: 'Smithey Official', url: 'https://www.smithey.com' },
-      { icon: '🛒', label: 'Amazon Collection', url: 'https://www.amazon.com/s?k=smithey+ironware' }
+      { icon: '🏪', label: 'Smithey Official', url: 'https://www.smithey.com' }
     ]
   },
   {
